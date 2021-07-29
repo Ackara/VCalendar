@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VCalendar", "src\VCalendar\VCalendar.csproj", "{3771F327-37B0-44EB-9438-85D6CEB55398}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VCalendar.MSTest", "tests\VCalendar.MSTest\VCalendar.MSTest.csproj", "{7DB3875E-295D-4704-B25A-28212A4D9CC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{30375496-DEF9-4063-A6AE-12089C9C8E6A}"
+	ProjectSection(SolutionItems) = preProject
+		build.ps1 = build.ps1
+		commands.json = commands.json
+		build\manifest.json = build\manifest.json
+		build\tasks.psake.ps1 = build\tasks.psake.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3771F327-37B0-44EB-9438-85D6CEB55398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3771F327-37B0-44EB-9438-85D6CEB55398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3771F327-37B0-44EB-9438-85D6CEB55398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3771F327-37B0-44EB-9438-85D6CEB55398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DB3875E-295D-4704-B25A-28212A4D9CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DB3875E-295D-4704-B25A-28212A4D9CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DB3875E-295D-4704-B25A-28212A4D9CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DB3875E-295D-4704-B25A-28212A4D9CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F3A2626-83B4-46BF-BFBB-4DBE92C5095B}
+	EndGlobalSection
+EndGlobal

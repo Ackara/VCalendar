@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Acklann.VCalendar</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Title>VCalendar</Title>
+
+    <Version>0.0.4</Version>
+    <AssemblyVersion>0.0.4</AssemblyVersion>
+    <AssemblyFileVersion>0.0.4</AssemblyFileVersion>
+
+    <Company>Ackara</Company>
+    <Authors>Ackara</Authors>
+    <Copyright>Copyright 2021 Ackara, All Rights Reserved.</Copyright>
+    
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/Ackara/VCalendar.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Ackara/VCalendar</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/Ackara/VCalendar/blob/master/changelog.md</PackageReleaseNotes>
+    <PackageLicenseFile>license.md</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\license.md">
+      <PackagePath></PackagePath>
+    </Content>
+
+    <Content Include="..\..\icon.png">
+      <PackagePath></PackagePath>
+    </Content>
+  </ItemGroup>
+</Project>

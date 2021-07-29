@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Acklann.Ncrement.Powershell</name>
+    </assembly>
+    <members>
+        <member name="T:Acklann.Ncrement.Cmdlets.EditManifestCmdlet">
+            <summary>
+            <para type="synopsis">Edit a manifest file.</para>
+            </summary>
+            <seealso cref="T:Acklann.Ncrement.Cmdlets.ManifestCmdletBase" />
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.EditManifestCmdlet.ManifestPath">
+            <summary>
+            <para type="description">The absolute path of the manifest file.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.EditManifestCmdlet.InputObject">
+            <summary>
+            <para type="description">The [Manifest] to be used to overwritting the file.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.EditManifestCmdlet.Stage">
+            <summary>
+            <para type="description">Determine whether the modified file should be staged in source control.</para>
+            </summary>
+        </member>
+        <member name="M:Acklann.Ncrement.Cmdlets.EditManifestCmdlet.ProcessRecord">
+            <summary>
+            Processes the record.
+            </summary>
+        </member>
+        <member name="T:Acklann.Ncrement.Cmdlets.ManifestCmdletBase">
+            <summary>
+            </summary>
+            <seealso cref="T:System.Management.Automation.Cmdlet" />
+            <seealso cref="T:Acklann.Ncrement.IManifest" />
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.Id">
+            <summary>
+            <para type="description">The manifest ID.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.Name">
+            <summary>
+            <para type="description">The manifest name.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.Version">
+            <summary>
+            <para type="description">The manifest version.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.VersionFormat">
+            <summary>
+            <para type="description">The manifest version format.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.Description">
+            <summary>
+            <para type="description">The manifest description.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.Tags">
+            <summary>
+            <para type="description">The manifest tags.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.Website">
+            <summary>
+            <para type="description">The manifest project url.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.Icon">
+            <summary>
+            <para type="description">The manifest icon uri.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.Repository">
+            <summary>
+            <para type="description">The manifest repository uri.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.ReleaseNotes">
+            <summary>
+            <para type="description">The manifest release notes.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.Company">
+            <summary>
+            <para type="description">The manifest company.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.Authors">
+            <summary>
+            <para type="description">The manifest authors.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.License">
+            <summary>
+            <para type="description">The manifest license.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.Copyright">
+            <summary>
+            <para type="description">The manifest copyright.</para>
+            </summary>
+        </member>
+        <member name="M:Acklann.Ncrement.Cmdlets.ManifestCmdletBase.Overwrite(Acklann.Ncrement.Manifest)">
+            <summary>
+            Overwrites the specified manifest.
+            </summary>
+            <param name="manifest">The manifest.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Acklann.Ncrement.Cmdlets.NewManifestCmdlet">
+            <summary>
+            <para type="synopsis">Creates a new [Manifest] object.</para>
+            <para type="description">This cmdlet creates a new [Manifest] object.</para>
+            </summary>
+            <seealso cref="T:Acklann.Ncrement.Cmdlets.ManifestCmdletBase" />
+            <example>
+            <code>
+            New-NcrementManifest | ConvertTo-Json | Out-File "C:\app\manifest.json";
+            </code>
+            <para>This example, creates a new [Manifest] and saves to a file.</para>
+            </example>
+        </member>
+        <member name="M:Acklann.Ncrement.Cmdlets.NewManifestCmdlet.ProcessRecord">
+            <summary>
+            Processes the record.
+            </summary>
+        </member>
+        <member name="T:Acklann.Ncrement.Cmdlets.SelectVersionCmdlet">
+            <summary>
+            <para type="synopsis">Select the version number from a manifest.</para>
+            </summary>
+            <seealso cref="T:System.Management.Automation.Cmdlet" />
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.SelectVersionCmdlet.CurrentBranch">
+            <summary>
+            <para type="description">The source control current branch.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.SelectVersionCmdlet.InputObject">
+            <summary>
+            <para type="description">The file-path or instance of a [Manifest] object.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.SelectVersionCmdlet.Format">
+            <summary>
+            <para type="description">The format string.</para>
+            </summary>
+        </member>
+        <member name="M:Acklann.Ncrement.Cmdlets.SelectVersionCmdlet.ProcessRecord">
+            <summary>
+            Processes the record.
+            </summary>
+        </member>
+        <member name="T:Acklann.Ncrement.Cmdlets.StepVersionCmdlet">
+            <summary>
+            <para type="synopsis">Increment a [Manifest] object version number.</para>
+            <para type="description">This cmdlet incrments a [Manifest] object's version number.</para>
+            </summary>
+            <seealso cref="T:System.Management.Automation.Cmdlet" />
+            <example>
+            <code>"C:\app\maifest.json" | Step-NcrementVersionNumber -Minor | ConvertTo-Json | Out-File "C:\app\manifest.json";</code>
+            <para type="description">This example increments version number then saves it back to disk.</para>
+            </example>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.StepVersionCmdlet.InputObject">
+            <summary>
+            <para type="description">The file-path or instance of a [Manifest] object.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.StepVersionCmdlet.Major">
+            <summary>
+            <para type="description">When present, the major version number will be incremented.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.StepVersionCmdlet.Minor">
+            <summary>
+            <para type="description">When present, the minor version number will be incremented.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.StepVersionCmdlet.Patch">
+            <summary>
+            <para type="description">When present, the patch version number will be incremented.</para>
+            </summary>
+        </member>
+        <member name="M:Acklann.Ncrement.Cmdlets.StepVersionCmdlet.ProcessRecord">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Acklann.Ncrement.Cmdlets.UpdateProjectFileCmdlet">
+             <summary>
+             <para type="synopsis">Updates a project file version number.</para>
+             <para type="description">
+             This cmdlet will modify a project file with the information in the specified [Manifest]
+             object. If the project file passed is not known it will be ignored.
+             </para>
+             </summary>
+             <seealso cref="T:Acklann.Ncrement.Cmdlets.ManifestCmdletBase" />
+             <example>
+             <code>
+            Get-ChildItem -Filter "*.csproj" | Update-NcrementProjectFile $manifest -Commit;
+             </code>
+             <para>
+             This example will update the project file version number then commit the changes to source control.
+             </para>
+             </example>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.UpdateProjectFileCmdlet.InputObject">
+            <summary>
+            <para type="description">The file-path or instance of a [Manifest] object.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.UpdateProjectFileCmdlet.ProjectFile">
+            <summary>
+            <para type="description">The project file. If the file type is unknown it will be ignored.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.UpdateProjectFileCmdlet.Message">
+            <summary>
+            <para type="description">The commit message.</para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.UpdateProjectFileCmdlet.Commit">
+            <summary>
+            <para type="description">
+            When present, any files modified by this cmdlet will be committed to source control.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Acklann.Ncrement.Cmdlets.UpdateProjectFileCmdlet.CommitAll">
+            <summary>
+            <para type="description">When present, all files will be committed to source control.</para>
+            </summary>
+        </member>
+        <member name="M:Acklann.Ncrement.Cmdlets.UpdateProjectFileCmdlet.BeginProcessing">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Acklann.Ncrement.Cmdlets.UpdateProjectFileCmdlet.ProcessRecord">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Acklann.Ncrement.Cmdlets.UpdateProjectFileCmdlet.EndProcessing">
+            <summary>
+            </summary>
+        </member>
+    </members>
+</doc>
