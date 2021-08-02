@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
@@ -9,9 +9,9 @@
   <PropertyGroup>
     <Title>VCalendar</Title>
 
-    <Version>0.0.4</Version>
-    <AssemblyVersion>0.0.4</AssemblyVersion>
-    <AssemblyFileVersion>0.0.4</AssemblyFileVersion>
+    <Version>0.0.5</Version>
+    <AssemblyVersion>0.0.5</AssemblyVersion>
+    <AssemblyFileVersion>0.0.5</AssemblyFileVersion>
 
     <Company>Ackara</Company>
     <Authors>Ackara</Authors>

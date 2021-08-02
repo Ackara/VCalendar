@@ -7,9 +7,9 @@
 
     <RootNamespace>Acklann.VCalendar</RootNamespace>
   
-<Version>0.0.4</Version>
-<AssemblyVersion>0.0.4</AssemblyVersion>
-<AssemblyFileVersion>0.0.4</AssemblyFileVersion>
+<Version>0.0.5</Version>
+<AssemblyVersion>0.0.5</AssemblyVersion>
+<AssemblyFileVersion>0.0.5</AssemblyFileVersion>
 <PackageIcon>icon.png</PackageIcon>
 <RepositoryUrl>https://github.com/Ackara/VCalendar.git</RepositoryUrl>
 <PackageProjectUrl>https://github.com/Ackara/VCalendar</PackageProjectUrl>
