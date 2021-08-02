@@ -50,7 +50,7 @@ namespace Acklann.VCalendar
             if (!File.Exists(filePath)) throw new FileNotFoundException($"Could not find file at '{filePath}'.");
             static void read(string x, out string name, out string value)
             {
-                string[] parts = x.Split(':', System.StringSplitOptions.RemoveEmptyEntries);
+                string[] parts = x.Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
                 name = (parts.Length > 0 ? parts[0].ToUpperInvariant().Trim() : default);
                 value = (parts.Length > 1 ? parts[1].Trim() : default);
             }

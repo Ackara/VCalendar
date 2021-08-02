@@ -52,11 +52,5 @@ namespace Acklann.VCalendar
             if (Transparent) writer.WriteLine($"TRANSP:TRANSPARENT");
             writer.WriteLine("END:VEVENT");
         }
-
-        #region Backing Members
-
-
-
-        #endregion Backing Members
     }
 }
