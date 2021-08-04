@@ -31,13 +31,13 @@ namespace Acklann.VCalendar
 
         public DateTime DTStart
         {
-            get => DateTime.TryParseExact(Get("DTSTART"), "yyyyMMdd", default, System.Globalization.DateTimeStyles.None, out DateTime date) ? date : default;
+            get => DateTime.TryParseExact(Get("DTSTART").Substring(0, 8), "yyyyMMdd", default, System.Globalization.DateTimeStyles.None, out DateTime date) ? date : default;
             set => Set("DTSTART", value.ToString("yyyyMMdd"));
         }
 
         public DateTime DTEnd
         {
-            get => DateTime.TryParseExact(Get("DTEND"), "yyyyMMdd", default, System.Globalization.DateTimeStyles.None, out DateTime date) ? date : default;
+            get => DateTime.TryParseExact(Get("DTEND").Substring(0, 8), "yyyyMMdd", default, System.Globalization.DateTimeStyles.None, out DateTime date) ? date : default;
             set => Set("DTEND", value.ToString("yyyyMMdd"));
         }
 

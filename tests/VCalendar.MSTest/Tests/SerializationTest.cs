@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Acklann.VCalendar.Tests
@@ -7,12 +8,10 @@ namespace Acklann.VCalendar.Tests
     [TestClass]
     public class SerializationTest
     {
-        [TestMethod]
-        public void Can_read_ics_file()
+        [DataTestMethod]
+        [DynamicData(nameof(GetCalendarFiles), DynamicDataSourceType.Method)]
+        public void Can_read_ics_file(string filePath)
         {
-            // Arrange
-            string filePath = TestData.GetFilePath("*.ics");
-
             // Act
             var calendar = VCalendar.Calendar.ReadFile(filePath);
 
@@ -49,5 +48,17 @@ namespace Acklann.VCalendar.Tests
             calendar.Events.ShouldAllBe(x => x.DTStart != default);
             calendar.Events.ShouldAllBe(x => x.DTEnd != default);
         }
+
+        #region Backing Members
+
+        private static IEnumerable<object[]> GetCalendarFiles()
+        {
+            foreach (string filePath in TestData.GetFilePaths("*.ics"))
+            {
+                yield return new object[] { filePath };
+            }
+        }
+
+        #endregion Backing Members
     }
 }

@@ -2,26 +2,26 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
-    <IsPackable>false</IsPackable>
-
     <RootNamespace>Acklann.VCalendar</RootNamespace>
-  
-<Version>0.0.5</Version>
-<AssemblyVersion>0.0.5</AssemblyVersion>
-<AssemblyFileVersion>0.0.5</AssemblyFileVersion>
-<PackageIcon>icon.png</PackageIcon>
-<RepositoryUrl>https://github.com/Ackara/VCalendar.git</RepositoryUrl>
-<PackageProjectUrl>https://github.com/Ackara/VCalendar</PackageProjectUrl>
-<PackageReleaseNotes>https://github.com/Ackara/VCalendar/blob/master/changelog.md</PackageReleaseNotes>
-<Company>Ackara</Company>
-<Copyright>Copyright 2021 Ackara, All Rights Reserved.</Copyright>
-<PackageLicenseFile>license.md</PackageLicenseFile>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
 
-<Title>VCalendar</Title>
+  <PropertyGroup>
+    <Version>0.0.5</Version>
+    <AssemblyVersion>0.0.5</AssemblyVersion>
+    <AssemblyFileVersion>0.0.5</AssemblyFileVersion>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/Ackara/VCalendar.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Ackara/VCalendar</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/Ackara/VCalendar/blob/master/changelog.md</PackageReleaseNotes>
+    <Company>Ackara</Company>
+    <Copyright>Copyright 2021 Ackara, All Rights Reserved.</Copyright>
+    <PackageLicenseFile>license.md</PackageLicenseFile>
 
-<Authors>Ackara</Authors>
-</PropertyGroup>
+    <Title>VCalendar</Title>
+
+    <Authors>Ackara</Authors>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="ApprovalTests" Version="5.5.0" />
@@ -46,15 +46,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="test-data\calendar.ics">
+    <None Include="test-data\*.ics">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
-
-
-
-
-
-
 </Project>

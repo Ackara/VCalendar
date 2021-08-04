@@ -45,13 +45,14 @@ namespace Acklann.VCalendar
             }
         }
 
-        public static Calendar ReadFile(string filePath)
+        public static Calendar Read(Stream stream)
         {
-            if (!File.Exists(filePath)) throw new FileNotFoundException($"Could not find file at '{filePath}'.");
             static void read(string x, out string name, out string value)
             {
                 string[] parts = x.Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
                 name = (parts.Length > 0 ? parts[0].ToUpperInvariant().Trim() : default);
+                if (!string.IsNullOrEmpty(name)) name = name.Split(';')[0];
+
                 value = (parts.Length > 1 ? parts[1].Trim() : default);
             }
 
@@ -59,7 +60,7 @@ namespace Acklann.VCalendar
             var calendar = new Calendar();
             ReaderContext context = ReaderContext.Calendar;
 
-            using (var reader = new StreamReader(filePath))
+            using (var reader = new StreamReader(stream))
             {
                 string line;
                 while (!reader.EndOfStream)
@@ -94,6 +95,15 @@ namespace Acklann.VCalendar
             }
 
             return calendar;
+        }
+
+        public static Calendar ReadFile(string filePath)
+        {
+            if (!File.Exists(filePath)) throw new FileNotFoundException($"Could not find file at '{filePath}'.");
+            using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
+            {
+                return Read(stream);
+            }
         }
 
         private static ReaderContext GetContext(string line, ReaderContext context)
